@@ -11,3 +11,23 @@ En lugar de crear múltiples instancias de un objeto, el patrón Flyweight permi
 Flyweight puede incluir un pool de conexiones. En lugar de abrir y cerrar una conexión para cada solicitud a la base de datos, el sistema mantiene un conjunto de conexiones abiertas que se pueden reutilizar.
 
 Al reducir la cantidad de objetos en memoria y la sobrecarga de conexión, el rendimiento general de la aplicación mejora. Las operaciones de lectura y escritura se vuelven más rápidas debido a la menor necesidad de gestionar múltiples conexiones o instancias.
+
+CREATE DATABASE IF NOT EXISTS `conjuntos_db`;
+
+USE `conjuntos_db`;
+
+CREATE TABLE
+`residents` (
+`id` int NOT NULL AUTO_INCREMENT,
+`nombre_residente` varchar(100) NOT NULL,
+`apartamento` varchar(100) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 5;
+
+INSERT INTO
+`residents`
+VALUES
+(1, 'Paula Pinzon', '201'),
+(2, 'Jhon Ardila', '401'),
+(3, 'Juan Rojas', '202'),
+(4, 'Luis Valencia', '100');
