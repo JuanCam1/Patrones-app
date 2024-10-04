@@ -16,18 +16,18 @@ CREATE DATABASE IF NOT EXISTS `conjuntos_db`;
 
 USE `conjuntos_db`;
 
-CREATE TABLE
-`residents` (
-`id` int NOT NULL AUTO_INCREMENT,
-`nombre_residente` varchar(100) NOT NULL,
-`apartamento` varchar(100) NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 5;
+CREATE TABLE residents (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre_residente VARCHAR(255) NOT NULL,
+apartamento VARCHAR(50) NOT NULL,
+ciudad VARCHAR(100) NOT NULL,
+tipo_edificio VARCHAR(100) NOT NULL
+);
 
-INSERT INTO
-`residents`
+INSERT INTO residents (nombre_residente, apartamento, ciudad, tipo_edificio)
 VALUES
-(1, 'Paula Pinzon', '201'),
-(2, 'Jhon Ardila', '401'),
-(3, 'Juan Rojas', '202'),
-(4, 'Luis Valencia', '100');
+('Juan Pérez', 'Apt 101', 'Bogotá', 'Residencial'),
+('Ana Gómez', 'Apt 202', 'Medellín', 'Residencial'),
+('Carlos Ruiz', 'Apt 303', 'Bogotá', 'Comercial'),
+('Laura Sánchez', 'Apt 404', 'Cali', 'Residencial'),
+('Pedro Fernández', 'Apt 505', 'Bogotá', 'Comercial');
