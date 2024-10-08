@@ -15,12 +15,6 @@ class ConcreteResident {
     public apartmentNumber: string,
     public flyweight: ResidentFlyweight
   ) {}
-
-  saveResident() {
-    console.log(
-      `Saving resident: ${this.name}, Apartment: ${this.apartmentNumber}, City: ${this.flyweight.city}, Building Type: ${this.flyweight.buildingType}`
-    );
-  }
 }
 
 class ResidentFlyweightFactory {
